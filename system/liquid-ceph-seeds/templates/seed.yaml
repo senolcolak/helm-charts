@@ -20,6 +20,12 @@ spec:
       role_assignments: # for keystone token validation
       - project: service
         role:    service
+    - name: liquid-ceph2
+      description: 'Limes integration for Ceph <https://github.com/cobaltcore-dev/liquid-ceph>'
+      password: '{{required ".Values.password missing" .Values.password2}}'
+      role_assignments: # for keystone token validation
+      - project: service
+        role:    service
 
   services:
   - name:        liquid-ceph
